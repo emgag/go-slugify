@@ -5,9 +5,9 @@ import (
 )
 
 func TestSlugify(t *testing.T) {
-	s := "test->àèâ<-test"
+	s := "test->àèâ<-test.txt"
 	slug := Marshal(s)
-	expected := "test-aea-test"
+	expected := "test-aea-test.txt"
 	if slug != expected {
 		t.Fatal("Return string is not slugified as expected", expected, slug)
 	}
